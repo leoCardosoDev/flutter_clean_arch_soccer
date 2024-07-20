@@ -23,7 +23,7 @@ class NextEventPlayer {
   String _getInitials() {
     final names = name.split(' ');
     final firstChar = names.first[0];
-    final lastChar = names.last[0];
+    final lastChar = names.last[names.length == 1 ? 1 : 0];
     return '$firstChar$lastChar';
   }
 }
@@ -36,5 +36,9 @@ void main() {
     expect(initialsOf('Leo Silva'), 'LS');
     expect(initialsOf('Ramona Pulada'), 'RP');
     expect(initialsOf('Ingrid Motta das Virgens'), 'IV');
+  });
+
+  test('should return the first letter of the first name', () async {
+    expect(initialsOf('Leo'), 'Le');
   });
 }
