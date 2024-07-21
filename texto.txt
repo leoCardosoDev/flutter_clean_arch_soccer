@@ -24,6 +24,9 @@ Uso da função CALL do Dart.
 Testando integração de um repositório com um caso de uso.
 Type inference no Dart.
 Uso de test doubles (Mock e Spy).
+## Input apenas é Mock
+## Output apenas é Stub
+## Input e Output é Spy
 Como resolver problemas de classes criando outras classes internamente utilizando Dependency Injection
 Como resolver problemas de uma classe depender de outra classe concreta utilizando o padrão DIP (Dependency Inversion Principle)
 

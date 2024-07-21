@@ -11,10 +11,15 @@ class NextEventLoader {
   }
 }
 
-class LoadNextEventRepository {
+abstract interface class LoadNextEventRepository {
+  Future<void> loadNextEvent({required String groupId});
+}
+
+class LoadNextEventMockRepository implements LoadNextEventRepository {
   String? groupId;
   int callsCount = 0;
 
+  @override
   Future<void> loadNextEvent({required String groupId}) async {
     this.groupId = groupId;
     callsCount++;
@@ -24,7 +29,7 @@ class LoadNextEventRepository {
 void main() {
   test('should load event data from a repository', () async {
     final groupId = Random().nextInt(5000).toString();
-    final repo = LoadNextEventRepository();
+    final repo = LoadNextEventMockRepository();
     final sut = NextEventLoader(repo: repo);
     await sut(groupId: groupId);
     expect(repo.groupId, groupId);
