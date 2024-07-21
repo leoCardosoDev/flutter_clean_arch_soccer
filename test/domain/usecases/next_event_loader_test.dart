@@ -26,7 +26,7 @@ abstract interface class LoadNextEventRepository {
   Future<NextEvent> loadNextEvent({required String groupId});
 }
 
-class LoadNextEventMockRepository implements LoadNextEventRepository {
+class LoadNextEventSpyRepository implements LoadNextEventRepository {
   String? groupId;
   NextEvent? output;
   int callsCount = 0;
@@ -41,12 +41,12 @@ class LoadNextEventMockRepository implements LoadNextEventRepository {
 
 void main() {
   late String groupId;
-  late LoadNextEventMockRepository repo;
+  late LoadNextEventSpyRepository repo;
   late NextEventLoader sut;
 
   setUp(() {
     groupId = Random().nextInt(5000).toString();
-    repo = LoadNextEventMockRepository();
+    repo = LoadNextEventSpyRepository();
     repo.output = NextEvent(
         groupName: 'any_group_name',
         date: DateTime.now(),
