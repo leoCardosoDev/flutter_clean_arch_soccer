@@ -1,17 +1,11 @@
 import 'dart:math';
 
+import 'package:clean_arch_soccer_flutter/domain/entities/next_event.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:clean_arch_soccer_flutter/domain/entities/next_event_player.dart';
 
-class NextEvent {
-  final String groupName;
-  final DateTime date;
-  final List<NextEventPlayer> players;
 
-  NextEvent(
-      {required this.groupName, required this.date, required this.players});
-}
 
 class NextEventLoader {
   final LoadNextEventRepository repo;
