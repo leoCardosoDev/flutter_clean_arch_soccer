@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:clean_arch_soccer_flutter/domain/entities/next_event.dart';
+import 'package:clean_arch_soccer_flutter/domain/repositories/load_next_event_repo.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:clean_arch_soccer_flutter/domain/entities/next_event_player.dart';
@@ -16,9 +17,7 @@ class NextEventLoader {
   }
 }
 
-abstract interface class LoadNextEventRepository {
-  Future<NextEvent> loadNextEvent({required String groupId});
-}
+
 
 class LoadNextEventSpyRepository implements LoadNextEventRepository {
   String? groupId;
