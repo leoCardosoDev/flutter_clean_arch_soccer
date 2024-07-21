@@ -1,0 +1,39 @@
+Aula 1:
+​Nessa aula iremos entender como será o app que iremos desenvolver e falar um pouco sobre como o Clean Architecture irá nos ajudar a criar o produto de forma correta
+
+Aula 2:
+Nessa aula será mostrado:
+TDD do zero
+Convenção SUT (system under test)
+Como refatorar seu código com segurança tendo testes
+Como criar uma entidade com regras de negócio
+Construtores do tipo factory
+Late properties
+Design pattern do Factory
+Clean code
+Red, green, refactor
+Padrão AAA (arrange, act, assert)
+
+Aula 3:
+Nessa aula iremos finalizar os testes regras de negócio dentro da entidade NextEventPlayer, sempre utilizando small commits.
+
+Aula 4:
+​O que é um caso de uso? Qual é sua função?
+Padrão para nomenclaturas de classes no clean architecture.
+Uso da função CALL do Dart.
+Testando integração de um repositório com um caso de uso.
+Type inference no Dart.
+Uso de test doubles (Mock e Spy).
+Como resolver problemas de classes criando outras classes internamente utilizando Dependency Injection
+Como resolver problemas de uma classe depender de outra classe concreta utilizando o padrão DIP (Dependency Inversion Principle)
+
+Aula 5
+​Nessa aula iremos:
+Criar um use case independente de data sources (API/Cache)
+Aplicando o Dependency Inversion Principle (DIP) do SOLID
+Padrão de nomenclatura para interfaces e classes
+Aplicar Test Doubles (Mock, Spy, Stub)
+Evitar de introduzir códigos de testes em classes de produção com o auxílio dos Test Doubles
+Mostrar o Red, Green, Refactor do TDD
+Mostrar o padrão AAA (Arrange, Act, Assert)
+Mostrar o padrão Don't Repeat Yourself (DRY) nos testes com o uso do setUp
