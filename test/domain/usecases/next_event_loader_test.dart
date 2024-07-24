@@ -1,11 +1,11 @@
-import 'dart:math';
-
 import 'package:clean_arch_soccer_flutter/domain/entities/next_event.dart';
 import 'package:clean_arch_soccer_flutter/domain/repositories/load_next_event_repo.dart';
 import 'package:clean_arch_soccer_flutter/domain/usecases/next_event_loader.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:clean_arch_soccer_flutter/domain/entities/next_event_player.dart';
+
+import '../../helpers/fakes.dart';
 
 class LoadNextEventSpyRepository implements LoadNextEventRepository {
   String? groupId;
@@ -28,7 +28,7 @@ void main() {
   late NextEventLoader sut;
 
   setUp(() {
-    groupId = Random().nextInt(5000).toString();
+    groupId = anyString();
     repo = LoadNextEventSpyRepository();
     repo.output =
         NextEvent(groupName: 'any_group_name', date: DateTime.now(), players: [
